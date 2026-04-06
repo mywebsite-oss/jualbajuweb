@@ -1,0 +1,247 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+.nav-links a {
+  margin-left: 20px;
+  color: #555;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+  background: url("../assets/banner.jpg") no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #3498db;
+  color: #fff;
+  border-radius: 5px;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #2980b9;
+}
+
+/* Grid Produk */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+}
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: #eee;
+}
+.product-info {
+  padding: 15px;
+}
+.product-title {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.product-price {
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.product-desc {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 10px 0;
+}
+
+/* Forms */
+.form-box {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.form-control:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Tables */
+.table-responsive {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #fff;
+}
+.bg-success {
+  background-color: #2ecc71;
+}
+.bg-warning {
+  background-color: #f1c40f;
+}
+.bg-danger {
+  background-color: #e74c3c;
+}
+
+/* Admin Sidebar Layout */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 250px;
+  background: #2c3e50;
+  color: #fff;
+  padding: 20px;
+}
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid #34495e;
+  padding-bottom: 15px;
+}
+.sidebar a {
+  display: block;
+  padding: 12px;
+  color: #bdc3c7;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+.sidebar a:hover,
+.sidebar a.active {
+  background: #34495e;
+  color: #fff;
+}
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background: #f4f6f8;
+}
+
+.tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+.tab-btn { padding: 10px 20px; border: none; background: #f1f1f1; cursor: pointer; border-radius: 5px 5px 0 0; font-weight: 500; transition: 0.3s; }
+.tab-btn:hover { background: #ddd; }
+.tab-btn.active { background: #3498db; color: #fff; }
+.tab-content { display: none; animation: fadeIn 0.3s ease; }
+.tab-content.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
